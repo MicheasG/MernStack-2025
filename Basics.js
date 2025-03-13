@@ -2,20 +2,19 @@
 //var iknowJS = confirm("do you know js");
 //console.log(iknowJS);
 
-var counter = 0;
+var counter = 0
 //console.log(counter)
 
 function incrementCounter() {
-    var counter2 = 1; //local variable of the function
-    counter++
-    console.log(counter)
-    //console.log(counter2)
+  var counter2 = 1 //local variable of the function
+  counter++
+  console.log(counter)
+  //console.log(counter2)
 
-    if(counter<10000)
-        incrementCounter()
+  if (counter < 10000) incrementCounter()
 }
 
-//console.log(counter2)
+console.log('counter 2' + counter)
 
 //incrementCounter()
 //console.log(counter)
@@ -33,8 +32,7 @@ function incrementCounter() {
 //ctrl + c -to stop indefinite execution
 
 //commenting we use - ctrl+/ (toggle)
-// 
-
+//
 
 //multiline comment
 
@@ -42,7 +40,6 @@ function incrementCounter() {
 var counter = 0;
 console.log(counter)
 */
-
 
 //for, foreach, while, do-while all loops present in JS
 
@@ -53,26 +50,23 @@ console.log(counter)
 
 //identifiers/variables - case sensitive
 
-var my_Name = "Some name"
-var My_Name = "Some other name"
+var my_Name = 'Some name'
+var My_Name = 'Some other name'
 
 //space not allowed, special chars apart from _,$ , others are not allowed
 
-var $myname = "Dollar Name",
- _myname = "underscore Name",
-my_Name5 = "Numeric Name"
- //5myname - starting from number is not allowed
+var $myname = 'Dollar Name',
+  _myname = 'underscore Name',
+  my_Name5 = 'Numeric Name'
+//5myname - starting from number is not allowed
 
-console.log(my_Name, My_Name, $myname, _myname , my_Name5)
-
+console.log(my_Name, My_Name, $myname, _myname, my_Name5)
 
 // operators
 
-
-
 //public Car {
-   // getCarSpecification(){ ..... }
-   // method1
+// getCarSpecification(){ ..... }
+// method1
 //}
 
 //myClass obj = new myClass()

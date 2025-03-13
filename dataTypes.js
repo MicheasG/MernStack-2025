@@ -4,6 +4,8 @@
 //number, string, boolean, undefined, object
 //null as value 
 
+
+
 var myVar = 1000
 console.log("the value we have is - ", myVar)
 //typeof - is used to check the datatype

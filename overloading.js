@@ -4,37 +4,47 @@
 //however there is no concept of overloading in JS functions instead we have over-writing concept where the last function
 //definition replaces all in top and gets hoisted as well
 
-console.log(Sum(5,6)) // 11
+console.log(Sum(5, 6)) // 11
 function Sum(p1, p2) {
-    console.log("2 Params")
-    return p1+p2
+  console.log('2 Params')
+  return p1 + p2
 }
 
-console.log(Sum(5,6)) // 11
+console.log(Sum(5, 6)) // 11
 function Sum(p1, p2, p3) {
-    console.log("3 Params")
-    return p1+p2+p3
+  console.log('3 Params')
+  return p1 + p2 + p3
 }
-console.log(Sum(5,6,5)) // 16
+console.log(Sum(5, 6, 5)) // 16
 
 console.log(Sum()) // 0
 
 //the hoisted function
 function Sum() {
-    console.log("no params accepted")
-    return 0
+  console.log('no params accepted')
+  return 0
 }
-console.log(Sum(5,5)) // 10
+console.log(Sum(5, 5)) // 10
 
-console.log(Sum(5,5,5,5)) //
+console.log(Sum(5, 5, 5, 5)) //
 
-var Sum = function(p1, p2, p3, p4) {
-    console.log("function epxression")
-    return p1+p2+p3+p4
+var Sum = function (p1, p2, p3, p4) {
+  console.log('function epxression')
+  return p1 + p2 + p3 + p4
 }
-console.log(Sum(5,5,5,5)) // 
-
-
+console.log(Sum(5, 5, 5, 5)) //
 
 //create and example of overloading where you can attend 3 sessions on a day and 4 sessions on another
 //print name of the sessions
+var Ses = function ({ ses1: name }, { ses2: name }, { ses3: name }) {
+  return ses1.name, ses2.name, ses3.name
+}
+
+console.log(
+  ses(
+    (ses1.name = 'mern1'),
+    (ses2.name = 'java'),
+    (ses2.name = 'DS'),
+    (ses2.name = 'spring')((ses2.name = 'java2'))
+  )
+)
