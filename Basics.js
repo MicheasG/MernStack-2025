@@ -1,73 +1,36 @@
-//console.log("sum of 5 and 5 is", 5+5)
-//var iknowJS = confirm("do you know js");
-//console.log(iknowJS);
+//js basics
+//1. dynamic typing
+var a = 'one'
+console.log(a) // prints a string
+a = 2 //assigned to a number value
+console.log(a)
 
-var counter = 0
-//console.log(counter)
+// type of tels us datatypes
+// hoisting functions as hoisted with they will definition where as variables
+// are hoisted with a value of undefined
 
-function incrementCounter() {
-  var counter2 = 1 //local variable of the function
-  counter++
-  console.log(counter)
-  //console.log(counter2)
-
-  if (counter < 10000) incrementCounter()
+// we use callback to use a function to call another fucntion
+function Mul(p1, p2, callback) {
+  var sum = p1 + p2
+  callback('result is ', sum)
 }
+Mul(5, 6, resultOf)
 
-console.log('counter 2' + counter)
+function resultOf(res, val) {
+  console.log(res + val)
+}
+// closure
 
-//incrementCounter()
-//console.log(counter)
+function hide() {
+  var name = 'Me'
+  var role = 'CEO'
+  var rate = 50
+  var employee = true
 
-// var counter = 0;
-// console.log(counter)
-
-// semicaolons are optional ;
-
-//dynamic typing - is present to assign any data type to the variable
-
-//autocasting - it also allows to reassign and change the data type at the moment of re-assignment
-
-//cls - can be used to clear terminal data
-//ctrl + c -to stop indefinite execution
-
-//commenting we use - ctrl+/ (toggle)
-//
-
-//multiline comment
-
-/*
-var counter = 0;
-console.log(counter)
-*/
-
-//for, foreach, while, do-while all loops present in JS
-
-//typeof - var name is used to check the datatype
-
-//array can be created, and are dynamic
-//var numbers = [1,2,3,4,5]
-
-//identifiers/variables - case sensitive
-
-var my_Name = 'Some name'
-var My_Name = 'Some other name'
-
-//space not allowed, special chars apart from _,$ , others are not allowed
-
-var $myname = 'Dollar Name',
-  _myname = 'underscore Name',
-  my_Name5 = 'Numeric Name'
-//5myname - starting from number is not allowed
-
-console.log(my_Name, My_Name, $myname, _myname, my_Name5)
-
-// operators
-
-//public Car {
-// getCarSpecification(){ ..... }
-// method1
-//}
-
-//myClass obj = new myClass()
-//obj.method1()
+  var getHide = function () {
+    return { name, role }
+  }
+  return getHide
+}
+var getH = hide()
+console.log(getH())
