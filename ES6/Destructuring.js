@@ -22,7 +22,6 @@
 // console.log(Three)
 // console.log(Four) // if no value is there for a variable default value is assigned - undefined
 
-
 //b. Default value assignments
 
 //let One = Numbers[0]
@@ -34,54 +33,50 @@
 // console.log(Three)
 // console.log(Four) // if no value is there for a variable default value is assigned - undefined
 
-
 //c. Rest of the array assignments (rest param)
 
 //let One = Numbers[0]
 
-let [One, Two, Three, Four, ...restNumbers] = [1,2,3,4,5,6,7] //Numbers Array
+let [One, Two, Three, Four, ...restNumbers] = [1, 2, 3, 4, 5, 6, 7] //Numbers Array
 
-console.log(One)
-console.log(Two)
-console.log(Three)
-console.log(Four) 
+// console.log(One)
+// console.log(Two)
+// console.log(Three)
+// console.log(Four)
 
-console.log(restNumbers) //One, Two, Three, Four values are copied and rest of the array is copied in restNumbers
+// console.log(restNumbers) //One, Two, Three, Four values are copied and rest of the array is copied in restNumbers
 
 //d.  Swapping of variables
 
-let a = "A", b = "B";
-
-//swapping
-
-[a,b] = [b,a]
+let a = 'A',
+  b = 'B'
+;[a, b] = [b, a]
 
 console.log(a)
 console.log(b)
-
 
 //2. Object Destructuring
 
 //a. Single object destructuring
 
 let Assessment = {
-    Name : "Jugue",
-    Standard : "Professional",
-    Marks : {
-        Java : 10,
-        Mernstack : 8,
-        ES6 : 9
-    }
-};
+  Name: 'Jugue',
+  Standard: 'Professional',
+  Marks: {
+    Java: 10,
+    Mernstack: 8,
+    ES6: 9,
+  },
+}
 
 // let ShowUserName =  Assessment.Name
 // let ShowUserJavaMark =  Assessment.Marks.Java
 // let ShowUserES6Mark =  Assessment.Marks.ES6
 
-let {Name, Standard} = Assessment
+//let { Name, Standard } = Assessment
 
-console.log(Name)
-console.log(Standard)
+// console.log(Name)
+// console.log(Standard)
 
 //b. Nested object destructuring
 
@@ -92,19 +87,17 @@ console.log(Standard)
 // console.log(ES6)
 // console.log(AWS)
 
-
-
-//Practice - 
+//Practice -
 let Student = {
-    FirstName : "Stacy",
-    Standard : "Higher Secondary",
-    Session : "Final Session",
-    TotalMarks : "75%",
-    Subject : {
-        Physics : 80,
-        Chemistry : 89,
-        Language : 92
-    }
+  FirstName: 'Stacy',
+  Standard: 'Higher Secondary',
+  Session: 'Final Session',
+  TotalMarks: '75%',
+  Subject: {
+    Physics: 80,
+    Chemistry: 89,
+    Language: 92,
+  },
 }
 
 //Questions for practice
@@ -112,7 +105,29 @@ let Student = {
 //print firstname, total marks and Individual Subject Marks, using object and nested destructuring
 //along with that also create a lastname and Ecology as (marks) "95", without making any change in Student
 
-//create an array of your aspirations, print first three to achieve in 2024,25,26 and keep others in ...rest operator, using array destructuring 
+let {
+  FirstName,
+  Subject: { Physics, Chemistry, Ecology = 95 },
+} = Student
+
+console.log(FirstName)
+console.log(Chemistry)
+console.log('Eco ' + Ecology)
+//console.log(Student)
+let Geology = {
+  FirstName: 'Jan',
+  lastName: 'claude',
+  marks: {
+    subject1: '22',
+    subject2: '44',
+  },
+}
+
+// let { FirstName, ...restEco } = Geology
+// console.log(FirstName)
+// console.log(restEco)
+
+//create an array of your aspirations, print first three to achieve in 2024,25,26 and keep others in ...rest operator, using array destructuring
 
 //create a funtion with name multiply which accepts three parameters, and return multiplication of all
 //but if we dont pass any parameter it returns 0
@@ -121,5 +136,5 @@ let Student = {
 
 //create an example of const where we can update on property of the object, where it says const is mutable
 
-//create a for loop using var and let, print each value in timeout after 2 second and try to 
-//demonstrate functional scope of var and lexical of let 
+//create a for loop using var and let, print each value in timeout after 2 second and try to
+//demonstrate functional scope of var and lexical of let
